@@ -20,16 +20,6 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
     };
   }, []);
 
-  useEffect(() => {
-    document.body.addEventListener(
-      "click",
-      () => {
-        setOpen(false);
-      },
-      { capture: true }
-    );
-  }, []);
-
   const renderedOptions = options.map((option) => {
     if (option.value === selected.value) {
       return null;
